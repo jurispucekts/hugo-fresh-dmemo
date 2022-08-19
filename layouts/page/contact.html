@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {{ .Content }}
+            <!-- Formspree Html Here -->
+          <form action="https://formspree.io/f/mzbwblbb" method="POST">
+            <label>
+              Jūsu e-pasts:
+              <input type="email" name="email">
+            </label>
+            <label>
+              Jūsu organizācijas nosaukums:
+              <input type="text" name="organisation">
+            </label>
+            <label>
+              Jūsu ziņa:
+              <textarea name="message"></textarea>
+            </label>
+            <input type="text" name="_gotcha" style="display:none" />
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+</form>
+        </div>
+    </div>
+</div>
+{{ end }}
